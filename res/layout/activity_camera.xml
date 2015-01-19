@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff0000"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera Activity" />
+	<FrameLayout 
+	  android:id="@+id/gallerylayout"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:background="#000">
+	  <ImageView
+	    android:id="@+id/visible_image"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"/>
+	  <ImageView
+	    android:id="@+id/colormap_overlay"
+	    android:scaleType="fitXY"
+		android:layout_gravity="bottom"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"/>
+	</FrameLayout>
+		<ImageView
+		    android:id="@+id/mergedImageView1"
+			android:layout_centerInParent="true"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+		  />
+     <Button
+	 	 android:id="@+id/openCameraButton"
+	     android:layout_height="wrap_content"
+	     android:layout_width="wrap_content"
+	     android:layout_below="@+id/galleryLayout"
+	     android:layout_centerHorizontal="true"
+	     android:text="@string/open_camera_message"
+	     android:onClick="openCamera" />
+  	<Button
+  	     android:id="@+id/nextButton"
+	     android:layout_height="wrap_content"
+	     android:layout_width="wrap_content"
+	     android:layout_below="@+id/openCameraButton"
+	     android:layout_centerHorizontal="true"
+	     android:text="@string/next_message"
+	     android:onClick="showOutput" />
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+   android:clipToPadding="false"
+    tools:context="com.example.quickeepoc.MainActivity" >
+
+  <FrameLayout 
+    	android:layout_width="wrap_content"
+    	android:layout_height="0dp"
+    	 android:clipChildren="true"
+   		android:clipToPadding="true"
+    	android:layout_weight="2">
+    	 
+   <WebView
+        android:id="@+id/campaignView"
+        android:layout_width="wrap_content" 
+        android:layout_height="fill_parent"
+        >
+   </WebView>
+
+    </FrameLayout>
+   
+	<FrameLayout 
+    	android:layout_width="fill_parent"
+    	android:id="@+id/cameraHolder"
+    	android:layout_height="0dp"
+    	android:layout_weight="6">
+ 
+    <com.example.quickeepoc.CameraPreview
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+ 	
+     <View
+        android:id="@+id/flash_effect_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0"
+        android:background="@android:color/white" />
+     
+     
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="fill_parent"
+       android:src="@drawable/lebron_large" />
+    
+     <Button
+         android:id="@+id/takephotobtn"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left|bottom"
+       	android:text="Photo"
+       	android:onClick="onCaptureClick"
+        android:contentDescription="test"
+        />
+ 	
+     <Button
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:text="Video"
+        android:onClick="onCaptureClick"
+        android:contentDescription="test"
+        />
+     
+    
+	
+    </FrameLayout>
+	
+ 	<android.support.v7.widget.RecyclerView
+        android:id="@+id/photostream"
+        android:layout_width="wrap_content"
+    	android:layout_height="0dp"
+    	android:background="@android:color/darker_gray"
+    	android:layout_weight="1"
+    	android:clipChildren="false"
+   		android:clipToPadding="false"
+        />  
+	
+	 
+	     
+	  <ImageView
+		    android:id="@+id/mergedImageView"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:onClick="backToCamera"
+		    android:visibility="gone"
+		    />
+	<Button
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:text="Camera"
+        android:onClick="backToCamera"
+        android:contentDescription="test"
+         android:visibility="gone"
+        />
+	
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuickeePoc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Login Activity -->
+    <string name="title">QuickeeCam Administrator Login</string>
+    <string name="user_name">User Name:</string>
+    <string name="password">Password:</string>
+    <string name="log_in">Log In</string>
+    <string name="title_activity_camera">CameraActivity</string>
+
+    <!-- Camera Activity -->
+    <string name="next_message">Output</string>
+    <string name="open_camera_message">Camera</string>
+    <string name="title_activity_submit">SubmitActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+</resources>
