@@ -46,7 +46,7 @@ EditText passwordEditText;
     	    @Override
     	    public void success(DevicePlaylistResponse o, Response response) {
     	    	devicePlaylistResponse = o;
-    	    	navigateToCameraActivity();
+    	    	navigateToHomeActivity();
     	    }
 
     	    @Override
@@ -80,9 +80,9 @@ EditText passwordEditText;
     	};
     	
     	try{
-    		//deviceApiService.deviceCheckin(4, deviceCheckinCallback);  		
+    		deviceApiService.deviceCheckin(4, deviceCheckinCallback);  		
     		deviceApiService.getDevicePlaylist(4, devicePlaylistCallback);
-    		//deviceApiService.getDeviceGallery(4, deviceGalleryCallback);
+    		deviceApiService.getDeviceGallery(4, deviceGalleryCallback);
     	}
     	catch (Exception ex){
     		String message = ex.getMessage();
@@ -90,7 +90,7 @@ EditText passwordEditText;
 
     }
     
-    private void navigateToCameraActivity(){
+    private void navigateToHomeActivity(){
 		Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
 		startActivity(intent);		
     }
